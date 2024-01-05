@@ -1,0 +1,116 @@
+2023-12-07 22:49:09,673 ERROR: Exception on / [GET] [in /Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/helpers.py", line 222, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2023-12-07 22:52:11,485 INFO: Microblog startup [in /Users/sergejustinin/PycharmProjects/microblog/app/__init__.py:52]
+2023-12-07 22:52:12,559 ERROR: Exception on / [GET] [in /Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/helpers.py", line 222, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2023-12-07 23:00:07,868 INFO: Microblog startup [in /Users/sergejustinin/PycharmProjects/microblog/app/__init__.py:52]
+2023-12-07 23:00:08,729 ERROR: Exception on / [GET] [in /Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/helpers.py", line 222, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?

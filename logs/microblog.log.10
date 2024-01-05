@@ -1,0 +1,90 @@
+2023-12-07 22:31:01,232 ERROR: Exception on / [GET] [in /Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/app/routes.py", line 28, in index
+    return render_template('index.html', title='Microblog', form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/sergejustinin/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/sergejustinin/PycharmProjects/microblog/app/templates/base.html", line 14, in top-level template code
+    <a href="{{ url_for('logout') }}">Выйти</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'logout'. Did you mean 'follow' instead?
+2023-12-07 22:33:15,156 INFO: Microblog startup [in /Users/sergejustinin/PycharmProjects/microblog/app/__init__.py:50]
+2023-12-07 22:33:16,190 ERROR: Exception on / [GET] [in /Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/app/routes.py", line 28, in index
+    return render_template('index.html', title='Microblog', form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/sergejustinin/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/sergejustinin/PycharmProjects/microblog/app/templates/base.html", line 14, in top-level template code
+    <a href="{{ url_for('logout') }}">Выйти</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sergejustinin/PycharmProjects/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'logout'. Did you mean 'follow' instead?
+2023-12-07 22:38:11,225 INFO: Microblog startup [in /Users/sergejustinin/PycharmProjects/microblog/app/__init__.py:50]
